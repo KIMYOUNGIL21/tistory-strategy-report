@@ -1,0 +1,110 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<style>
+  @font-face {
+    font-family: 'Pretendard';
+    src: local('Apple SD Gothic Neo'), local('Malgun Gothic');
+  }
+  html, body {
+    margin: 0; padding: 0;
+    width: 1200px; height: 630px;
+    overflow: hidden;
+    background: #090d1a;
+    font-family: 'Pretendard', 'Apple SD Gothic Neo', 'Malgun Gothic', sans-serif;
+  }
+  .card {
+    position: relative;
+    width: 1200px; height: 630px;
+    background:
+      radial-gradient(circle at 88% 18%, rgba(130,160,255,0.16), transparent 55%),
+      radial-gradient(circle at 78% 82%, rgba(227,168,60,0.10), transparent 45%),
+      linear-gradient(135deg, #090d1a 0%, #0e1b38 45%, #16294f 100%);
+    box-sizing: border-box;
+    padding: 72px 90px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+  .grid-overlay {
+    position: absolute; inset: 0;
+    background-image:
+      linear-gradient(rgba(255,255,255,0.035) 1px, transparent 1px),
+      linear-gradient(90deg, rgba(255,255,255,0.035) 1px, transparent 1px);
+    background-size: 56px 56px;
+    mask-image: radial-gradient(ellipse at 75% 40%, black 0%, transparent 65%);
+  }
+  .ring {
+    position: absolute;
+    right: -120px; top: 50%;
+    width: 520px; height: 520px;
+    transform: translateY(-50%);
+    border-radius: 50%;
+    border: 1px solid rgba(227,168,60,0.18);
+  }
+  .ring2 {
+    position: absolute;
+    right: 20px; top: 50%;
+    width: 340px; height: 340px;
+    transform: translateY(-50%);
+    border-radius: 50%;
+    border: 1px solid rgba(255,255,255,0.08);
+  }
+  .badge {
+    display: inline-block;
+    align-self: flex-start;
+    padding: 9px 20px;
+    border-radius: 999px;
+    background: rgba(255,255,255,0.07);
+    border: 1px solid rgba(255,255,255,0.16);
+    color: rgba(255,255,255,0.72);
+    font-size: 20px;
+    font-weight: 600;
+    letter-spacing: 0.3px;
+    margin-bottom: 34px;
+    z-index: 2;
+  }
+  .title {
+    font-size: 60px;
+    font-weight: 800;
+    color: #f5f6f8;
+    line-height: 1.28;
+    letter-spacing: -0.5px;
+    max-width: 880px;
+    z-index: 2;
+  }
+  .title .hl {
+    color: #e3a83c;
+  }
+  .subtitle {
+    margin-top: 30px;
+    font-size: 27px;
+    font-weight: 500;
+    color: rgba(255,255,255,0.5);
+    max-width: 800px;
+    z-index: 2;
+  }
+  .wordmark {
+    position: absolute;
+    right: 46px; bottom: 34px;
+    font-size: 20px;
+    font-weight: 700;
+    letter-spacing: 3px;
+    color: rgba(255,255,255,0.32);
+    z-index: 2;
+  }
+</style>
+</head>
+<body>
+  <div class="card">
+    <div class="grid-overlay"></div>
+    <div class="ring"></div>
+    <div class="ring2"></div>
+    <div class="badge">Suno 실전 매뉴얼</div>
+    <div class="title">Suno 스타일이<br><span class="hl">프롬프트와</span> 다를 때</div>
+    <div class="subtitle">원인부터 확인하는 순서</div>
+    <div class="wordmark">AI.PD</div>
+  </div>
+</body>
+</html>
